@@ -1,3 +1,4 @@
+from collections import deque
 from copy import copy
 from numpy import sqrt
 
@@ -93,10 +94,11 @@ class Route:
         return _self
 
 def shortest_route(streets, start, end):
-    routes = [Route(street) for street in start.streets_from]
+    routes = deque([Route(street) for street in start.streets_from])
     shortest_route = None
     print('Routes:')
-    for route in routes:
+    while routes:
+        route = routes.popleft()
         print(route)
         if route.connects(start, end):
             if not shortest_route or route.length() < shortest_route.length():
