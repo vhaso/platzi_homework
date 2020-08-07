@@ -1,0 +1,9 @@
+h1 {
+    font-size: 2em;
+    background-color: blue;
+    color: white;
+    box-shadow: gray;
+}
+p {
+    font-size: 1em;
+}
