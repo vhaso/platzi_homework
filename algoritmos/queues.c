@@ -52,4 +52,5 @@ int main(int argc, char const *argv[])
 		enqueue(&queue, i);
 	for (int i = 1; i <= 6; i++)
 		dequeue(&queue);
+	return 0;
 }
